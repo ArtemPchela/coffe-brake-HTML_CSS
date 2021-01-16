@@ -1,0 +1,301 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,90&display=swap");
+
+* {
+    color: #ffffff;
+    line-height: 1.5;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    height: 100%;
+}
+
+.wrapper {
+    /*overflow: hidden;*/
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    background: url("./images/coffee.jpg") center center no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+/*Header menu and navigation links*/
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 80px;
+    padding: 25px 0 50px 0;
+    flex: 0 0 auto;
+}
+
+.main-nav img {
+    position: relative;
+    width: 50px;
+    color: #ffffff;
+}
+
+.main-nav ul {
+    display: flex;
+}
+
+.main-nav ul li {
+    margin-left: 15px;
+}
+
+.nav-items {
+    display: none;
+}
+
+.nav-items li a:hover, :focus {
+    color: darkcyan;
+    transition: 0.5s;
+}
+/*Header menu and navigation links*/
+
+/*----------content---------------*/
+.content {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    flex: 1 0 auto;
+}
+
+.content-text {
+    text-align: center;
+}
+
+.content-text h2 {
+    font-size: 32px;
+    color: #ffffff;
+}
+
+.content-text p {
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 300;
+    margin: 20px;
+}
+
+.content-btn  {
+    color: #ffffff;
+    font-weight: 500;
+    transition: 0.7s ease;
+}
+
+.content-btn:hover {
+    color: darkcyan;
+    opacity: 1;
+    transition: 0.7s ease;
+}
+
+i {
+    color: darkcyan;
+    transition: 0.7s ease;
+}
+
+.off {
+    color: #ffffff;
+    transition: 0.7s ease;
+}
+/*-----content-----*/
+
+
+/*-----footer-----*/
+.icons-container {
+    display: flex;
+    height: 150px;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+}
+
+.icons-container ul {
+    display: flex;
+}
+
+.icons-container ul li {
+    margin-left: 35px;
+}
+
+.icons-container ul li a .fab {
+    font-size: 25px;
+    color: #ffffff;
+    transition: 0.5s;
+    line-height: 40px;
+}
+
+.icons-container ul li a .fab:hover {
+    color: rgb(0, 139, 139);
+    transition: 0.5s;
+}
+
+.icons-container ul li a {
+    display: block;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 35px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    transform: perspective(1000px) rotate(-30deg) skew(10deg) translate(0, 0);
+    transition: 0.5s;
+    box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5);
+}
+
+.icons-container ul li a:before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: -3px;
+    height: 100%;
+    /*width: 2px;*/
+    background-color: #ffffff;
+    transition: 0.5s;
+    transform: rotate(0deg) skewY(-45deg);
+}
+
+.icons-container ul li a:after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: -2px;
+    width: 100%;
+    background-color: #ffffff;
+    transition: 0.5s;
+    transform: rotate(0deg) skewX(-45deg);
+}
+
+.icons-container ul li a:hover {
+    transform: perspective(1000px) rotate(-10deg) skew(-15deg) translateY(-7px);
+    color: rgb(0, 139, 139);
+}
+/*-----footer-----*/
+
+
+/*======Coffee======*/
+.wrapper-coffee {
+    background: url("./images/coffee-beans.jpg") center center no-repeat;
+    background-size: cover;
+}
+/*======Coffee======*/
+
+@media (min-width: 768px) {
+    .main-nav img {
+        width: 65px;
+    }
+
+    .fa-2x {
+        font-size: 25px;
+    }
+
+    .main-nav ul li {
+        font-size: 25px;
+    }
+
+    .content {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        min-height: 100%;
+    }
+
+    .content-text {
+        text-align: center;
+        width: 60%;
+    }
+
+    .content-text h2 {
+        font-size: 46px;
+        color: #ffffff;
+    }
+
+    .content-text p {
+        font-size: 16px;
+        color: #ffffff;
+        font-weight: 300;
+        margin: 20px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .main-nav ul li {
+         font-size: 25px;
+     }
+}
+
+/*burger menu*/
+@media (max-width: 960px){
+    .nav-items {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #000000;
+        margin-top: 0;
+        z-index: 10;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        transition: left .8s cubic-bezier(1, 0, 0, 1);
+    }
+
+    .nav-items li a {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .nav-items.active {
+        display: flex;
+    }
+
+    .main-nav ul {
+        display: none;
+    }
+
+    .toggleMenu {
+        position: relative;
+        width: 32px;
+        height: 32px;
+        background: url("menu.png") no-repeat center;
+        z-index: 11;
+        transition: 0.7s ease;
+    }
+
+    .toggleMenu:hover {
+        color: darkcyan;
+    }
+
+    .toggleMenu.active {
+        background: url("close.png") center no-repeat;
+        transition: 0.7s ease;
+    }
+
+}
+/*burger menu*/
+
+
+
+
+
+@media (min-width: 576px) {  }
+@media (min-width: 768px) {  }
+@media (min-width: 992px) {  }
+@media (min-width: 1024px) {  }
+@media (min-width: 1200px) {  }
